@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{397D4FA5-AE4F-B0CF-CB61-B9856BDB3106}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "UE5FootBall",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		}
+	]
+}
