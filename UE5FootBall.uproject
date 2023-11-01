@@ -1,13 +1,16 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{397D4FA5-AE4F-B0CF-CB61-B9856BDB3106}",
+	"EngineAssociation": "{04A5C18D-B14B-66A3-E8B3-9590C68306F4}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
 		{
 			"Name": "UE5FootBall",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"UMG"
+			]
 		}
 	],
 	"Plugins": [
