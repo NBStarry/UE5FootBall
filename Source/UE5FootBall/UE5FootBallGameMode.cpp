@@ -3,6 +3,7 @@
 #include "UE5FootBallGameMode.h"
 #include "UE5FootBallPlayerController.h"
 #include "UE5FootBallCharacter.h"
+#include "CustomHUD.h"
 #include "UObject/ConstructorHelpers.h"
 
 AUE5FootBallGameMode::AUE5FootBallGameMode()
@@ -23,4 +24,6 @@ AUE5FootBallGameMode::AUE5FootBallGameMode()
 	{
 		PlayerControllerClass = PlayerControllerBPClass.Class;
 	}
+
+	HUDClass = ACustomHUD::StaticClass();
 }
