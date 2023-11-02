@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "CustomHUD.h"
+
+#include "CookBookStyle.h"
 
 #include "Engine/Canvas.h"
 
@@ -24,9 +24,13 @@ void ACustomHUD::BeginPlay()
 	[
 		SNew(SBox).WidthOverride(200.0f).HeightOverride(100.0f) // 尺寸
 		[
-			SNew(SButton).HAlign(HAlign_Center).VAlign(VAlign_Center).Content() // 按钮并居中
+			SNew(SButton)
+			.ButtonStyle(FCookBookStyle::Get(), "NormalButtonBrush")
+			.ContentPadding(FMargin(16))
+			.HAlign(HAlign_Center).VAlign(VAlign_Center).Content() // 按钮并居中
 			[
-				SNew(STextBlock) // 文字
+				SNew(STextBlock)// 文字
+				.TextStyle(FCookBookStyle::Get(), "NormalButtonText")
 				.Text(FText::FromString(TEXT("Settings")))
 				.Justification(ETextJustify::Center)
 				.Font(FSlateFontInfo(FPaths::EngineContentDir() / TEXT("Slate/Fonts/Roboto-Regular.ttf"), 24))
