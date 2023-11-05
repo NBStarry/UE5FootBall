@@ -24,7 +24,8 @@ public:
 private:
 	UPROPERTY() // 让timer不要被当做垃圾回收
 	FTimerHandle HUDToggleTimer;
-	
+
+	// TSharedPtr<SVerticalBox> StyledButton;
 	TSharedPtr<SVerticalBox> FlashWidget;
 	TSharedPtr<STextBlock> ButtonLabel;
 	TSharedPtr<SVerticalBox> SettingsButton;
