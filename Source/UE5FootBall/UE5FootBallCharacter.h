@@ -6,13 +6,16 @@
 #include "GameFramework/Character.h"
 #include "UE5FootBallCharacter.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, BlueprintType)
 class AUE5FootBallCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	AUE5FootBallCharacter();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stats)
+	FString Name;
 
 	// Called every frame.
 	virtual void Tick(float DeltaSeconds) override;
