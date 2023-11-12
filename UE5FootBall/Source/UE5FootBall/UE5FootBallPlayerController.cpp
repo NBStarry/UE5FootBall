@@ -10,7 +10,6 @@
 #include "EnhancedInputComponent.h"
 #include "InputActionValue.h"
 #include "EnhancedInputSubsystems.h"
-#include "UE5FootBallGameMode.h"
 #include "Engine/LocalPlayer.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -33,13 +32,6 @@ void AUE5FootBallPlayerController::BeginPlay()
 	{
 		Subsystem->AddMappingContext(DefaultMappingContext, 0);
 	}
-
-	// 学习实例化UObject
-	// AUE5FootBallGameMode *gm = Cast<AUE5FootBallGameMode>(GetWorld()->GetAuthGameMode());
-	// if(gm)
-	// {
-	// 	UUserProfile *object = NewObject<UUserProfile>(GetTransientPackage(), gm->UPBlueprintClassName);
-	// }
 }
 
 void AUE5FootBallPlayerController::SetupInputComponent()
