@@ -5,7 +5,16 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "ColoredTexture.h"
+#include "UserProfile.h"
 #include "UE5FootBallCharacter.generated.h"
+
+UENUM(BlueprintType)
+enum class EStatus : uint8
+{
+	Stopped UMETA(DisplayName = "Stopped"),
+	Moving UMETA(DisplayName = "Moving"),
+	Attacking UMETA(DisplayName = "Attacking"),
+};
 
 UCLASS(Blueprintable, BlueprintType)
 class AUE5FootBallCharacter : public ACharacter
@@ -19,6 +28,11 @@ public:
 	FString Name;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HUD)
 	FColoredTexture Texture;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stats)
+	EStatus Status; 
+
+	UFUNCTION(BlueprintCallable, Category = Properties)
+	FString ToString() const;
 	
 	// Called every frame.
 	virtual void Tick(float DeltaSeconds) override;

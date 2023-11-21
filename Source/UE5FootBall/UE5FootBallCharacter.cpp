@@ -45,7 +45,13 @@ AUE5FootBallCharacter::AUE5FootBallCharacter()
 	PrimaryActorTick.bStartWithTickEnabled = true;
 }
 
-void AUE5FootBallCharacter::Tick(float DeltaSeconds)
+FString AUE5FootBallCharacter::ToString() const
+{
+	return FString::Printf(TEXT("An instance of UProfile: %s"), *Name);
+}
+
+
+void AUE5FootBallCharacter::Tick(const float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
 }
