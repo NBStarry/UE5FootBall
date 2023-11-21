@@ -64,13 +64,16 @@ void AUE5FootBallPlayerController::SetupInputComponent()
 void AUE5FootBallPlayerController::OnInputStarted()
 {
 	StopMovement();
-	// 学习实例化UObject
-	AUE5FootBallGameMode *gm = Cast<AUE5FootBallGameMode>(GetWorld()->GetAuthGameMode());
-	UE_LOG(LogTemp, Log, TEXT("Clicked!"))
-	if(gm)
-	{
-		UUserProfile *object = NewObject<UUserProfile>(GetTransientPackage(), gm->UPBlueprintClassName);
-	}
+	// 学习实例化和销毁UObject
+	// AUE5FootBallGameMode *gm = Cast<AUE5FootBallGameMode>(GetWorld()->GetAuthGameMode());
+	// UE_LOG(LogTemp, Log, TEXT("Clicked!"))
+	// if(gm)
+	// {
+	// 	UUserProfile *object = NewObject<UUserProfile>(GetTransientPackage(), gm->UPBlueprintClassName);
+	// 	UE_LOG(LogTemp, Log, TEXT("Created!"))
+	// 	object->ConditionalBeginDestroy();
+	// 	UE_LOG(LogTemp, Log, TEXT("Destoryed!"))
+	// }
 }
 
 // Triggered every frame when the input is held down
