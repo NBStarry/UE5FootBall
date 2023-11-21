@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "ColoredTexture.h"
 #include "UE5FootBallCharacter.generated.h"
 
 UCLASS(Blueprintable, BlueprintType)
@@ -16,7 +17,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stats)
 	FString Name;
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HUD)
+	FColoredTexture Texture;
+	
 	// Called every frame.
 	virtual void Tick(float DeltaSeconds) override;
 
